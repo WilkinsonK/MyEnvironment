@@ -1,0 +1,18 @@
+{
+    "editor.fontSize": 14,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [70, 80],
+    "editor.suggestSelection": "first",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "python.languageServer": "Pylance",
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.productIconTheme": "fluent-icons"
+}
