@@ -1,6 +1,10 @@
-export DEFAULT_PYTHON=python3
 
 # python shortcuts
+if [[ $DEFAULT_PYTHON = "" ]]
+then
+    DEFAULT_PYTHON=python3
+fi
+
 alias py=$DEFAULT_PYTHON
 alias pi='${DEFAULT_PYTHON} -i'
 
