@@ -160,4 +160,13 @@ if [[ ! -d $vsrc_root ]]
 then
     mkdir $vsrc_root
 fi
-echo $vsrc_root > $venv_root/lib/site-packages/project.pth
+
+if [[ -d $venv_root/lib/site-packages ]]
+then
+    pth_file_loc=$venv_root/lib/site-packages
+else 
+    # fallback in case site-packages path is not
+    # immediately available.
+    pth_file_loc=$venv_root/lib
+fi
+echo $vsrc_root > $pth_file_loc/project.pth
