@@ -75,7 +75,7 @@ exit_on_failure() {
 }
 
 
-# execute the build script if it exists,
+# execute the build scripts if it exists,
 # otherwise skip this step.
 if [[ -f $SCRIPT_DIR/initiate.sh ]]
 then
