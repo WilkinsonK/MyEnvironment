@@ -1,10 +1,13 @@
-#/bin/bash
+#!/bin/bash
 
 # Here lies my bash snippets specifically for logical
 # purposes. Technically, macros, or not unlike macros
 # at the very least? Either way, writing in bash can
 # get fairly abstract; hoping to make it less obtuse
 # for the future.
+
+
+exit 0
 
 
 # IF..ELSE examples:
@@ -35,7 +38,7 @@ fi
 # below:
 # https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
 executable=python3
-if [[ ! command $executable ]]
+if [[ ! $(command -v $executable) ]]
 then
     echo "${executable} not available. exiting."
     exit 2
