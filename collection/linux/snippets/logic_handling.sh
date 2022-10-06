@@ -37,6 +37,10 @@ fi
 # fit the needful, this example was derived from the
 # below:
 # https://stackoverflow.com/questions/592620/how-can-i-check-if-a-program-exists-from-a-bash-script
+
+# in addition to the 'command' command, other
+# options for testing a binary exists are
+# 'which' or 'whereis'.
 executable=python3
 if [[ ! $(command -v $executable) ]]
 then
