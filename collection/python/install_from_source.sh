@@ -1,13 +1,16 @@
 #!/bin/bash
 
+# Author: Keenan W. Wilkinson
+# From his private library, found at:
+# https://github.com/WilkinsonK/environment-collections/blob/main/collection/python/install_from_source.sh
+
 # Use this script to pull and build a python
 # distribution from the source code. Effectively
 # this is an install wizard to make a future
 # install easier.
 
-
 # script constants
-BUILD_THREAD_COUNT=8
+BUILD_THREAD_COUNT=16
 OVERRIDE_PYTHON3_CMD="Y"
 PYTHON_SOURCE_VERSION="3.8.6"
 PYTHON_BUILD_DIR=$(pwd)/python
@@ -24,6 +27,9 @@ read override_python3_cmd
 if [[ $python_source_version != "" ]]
 then
     PYTHON_SOURCE_VERSION=$python_source_version
+elif [[ $1 != "" ]]
+then
+    PYTHON_SOURCE_VERSION=$1
 fi
 
 if [[ $override_python3_cmd != "" ]]
@@ -41,7 +47,6 @@ fi
 # ensure dependencies installed
 echo "updating needed binaries"
 DEBIAN_FRONTEND=noninteractive TZ=Etx/UTC apt-get -y install tzdata
-apt-get update && apt-get upgrade -y
 apt-get install -y   \
     make             \
     build-essential  \
