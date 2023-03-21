@@ -40,6 +40,7 @@ fi
 
 # ensure dependencies installed
 echo "updating needed binaries"
+DEBIAN_FRONTEND=noninteractive TZ=Etx/UTC apt-get -y install tzdata
 apt-get update && apt-get upgrade -y
 apt-get install -y   \
     make             \
