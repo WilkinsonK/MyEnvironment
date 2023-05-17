@@ -18,11 +18,11 @@ PYTHON_BUILD_DIR=${PYTHON_BUILD_DIR:-$(pwd)/python}
 echo "begin building python from source"
 
 # allow for user defined variables
-echo -n "enter the desired version [${PYTHON_SOURCE_VERSION}]: "
-read python_source_version
+# echo -n "enter the desired version [${PYTHON_SOURCE_VERSION}]: "
+# read python_source_version
 
-echo -n "use as target for 'python3'? [Y/n]: "
-read override_python3_cmd
+# echo -n "use as target for 'python3'? [Y/n]: "
+# read override_python3_cmd
 
 if [[ $python_source_version != "" ]]
 then
